@@ -11,7 +11,6 @@ class Accordion extends React.Component {
         this.setState({ currentButtonIndex: index })
     }
     renderSections() {
-        const currentSection = this.props.sections[this.state.currentButtonIndex]
         return this.props.sections.map((section, index) => (
             <li>
                 <button key={index} onClick={() => this.handleButtonClick(index)}>{section.title}</button>
@@ -33,7 +32,6 @@ class Accordion extends React.Component {
         }
     }
     render() {
-        
         return (
           <ul>
               {this.renderSections()}
